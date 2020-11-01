@@ -16,8 +16,8 @@ dictionaryRouter.get("/list", (req, res) => {
 
 dictionaryRouter.get("/translate", (req, res) => {
 
-  const word = req.params.word || "samochód";
-  const lang = req.params.lang || "depl";
+  const word = req.query.word || "samochód";
+  const lang = req.query.lang || "depl";
 
   var data = '';
 
@@ -42,9 +42,6 @@ dictionaryRouter.get("/translate", (req, res) => {
       console.log(error);
     });
 })
-
-
-
 
 
 module.exports = dictionaryRouter
