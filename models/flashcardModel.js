@@ -6,9 +6,9 @@ const flashcardSchema = new Schema({
         type: String,
         required: true
     },
-    translations: {
-        type: [String],
-        validate: v => Array.isArray(v) && v.length > 0
+    translation: {
+        type: String,
+        required: true
  
     }
 },
