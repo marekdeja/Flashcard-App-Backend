@@ -3,7 +3,7 @@ var dictionaryRouter = express.Router();
 var axios = require('axios')
 
 dictionaryRouter.get("/list", (req, res) => {
-  const lang = 'pl'
+  const lang = 'en'
   axios.get(`https://api.pons.com/v1/dictionaries?language=${lang}`)
     .then(response => {
 
